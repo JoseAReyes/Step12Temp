@@ -1,0 +1,25 @@
+﻿@model SinglePage.Models.UserResponse
+@{
+   Layout = null;
+}
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+<h2 align="center">Gas Fill-ups Log</h2>
+<table align="center" border="1">
+   <thead>
+      <tr>
+         <th>Date</th>
+         <th>Odometer</th>
+         <th>Gallons</th>
+         <th>Cost</th>
+      </tr>
+   </thead>
+   <thead>
+      <tr>
+         <th>@Model.DateInput</th>
+         <th>@Model.Odometer</th>
+         <th>@Model.Gallons</th>
+         <th>@Model.TotalCost</th>
+      </tr>
+   </thead>
+</table>
+<a asp-action="Edit" class="btn btn-primary" align="center">Edit</a>

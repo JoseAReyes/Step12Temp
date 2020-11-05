@@ -1,0 +1,60 @@
+﻿@model SinglePage.Models.UserResponse
+@{
+   Layout = null;
+}
+
+<ul>
+   <li><a class="active" asp-action="Index">Gas Fill-up</a></li>
+   <li><a asp-action="Income">Income</a></li>
+   <li><a asp-action="Expenses">Expenses</a></li>
+   <li><a asp-action="ShiftLog">Shift Log</a></li>
+</ul>
+<div class="container" style="margin-left:16%;padding:1px 16px;height:1000px;">
+   <form method="post">
+      <div asp-validation-summary="All">
+      </div>
+
+      <h2 align="center">Add Gas Fill-up</h2>
+      <table>
+         <tr>
+            <td align="right"><strong>Date</strong>:</td>
+            <td><input asp-for="DateInput" type="date" placeholder="Date" /></td>
+         </tr>
+         <tr><td colspan="2"><br></td></tr>
+         <tr>
+            <td align="right"><strong>Odometer</strong>:</td>
+            <td>
+               <input asp-for="Odometer" id="odometer" min="1"
+                      step="1" max="999999" placeholder="000,000" />
+            </td>
+         </tr>
+         <tr><td colspan="2"><br></td></tr>
+         <tr>
+            <td align="right"><strong>Gallons</strong>:</td>
+            <td>
+               <input asp-for="Gallons" type="number" id="gallons" min="0.01"
+                      step="0.01" max="2500" placeholder="00.00" />
+            </td>
+         </tr>
+         <tr><td colspan="2"><br></td></tr>
+         <tr>
+            <td align="right"><strong>Total Cost</strong>: $</td>
+            <td>
+               <input asp-for="TotalCost" type="number" id="total cost" n min="0.01"
+                      step="0.01" max="2500" placeholder="00.00" />
+            </td>
+         </tr>
+         <tr><td colspan="2"><br></td></tr>
+         <tr>
+            <td>
+            </td>
+            <td>
+               <button type="submit" style="width: 100px; height: 25px;">
+                  <strong>Add</strong>
+               </button>
+            </td>
+         </tr>
+      </table>
+   </form>
+
+</div>
